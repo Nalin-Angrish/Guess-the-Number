@@ -10,6 +10,7 @@ function rangeUpdate() {
   var l1 = low, h1 = high;
   if (h1 - l1 < 400) {
     l1 = (h1 + l1) / 2 - 200;
+    l1 = max(0, l1);
     h1 = l1 + 400;
   }
   const rangeOutput = document.getElementById("rangeOutput");
