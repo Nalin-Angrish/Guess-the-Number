@@ -8,9 +8,9 @@ let high = 1000;
 
 function rangeUpdate() {
   var l1 = low, h1 = high;
-  if (h1 - l1 < 100) {
-    l1 = (h1 + l1) / 2 - 50;
-    h1 = l1 + 100;
+  if (h1 - l1 < 200) {
+    l1 = (h1 + l1) / 2 - 100;
+    h1 = l1 + 200;
   }
   const rangeOutput = document.getElementById("rangeOutput");
   rangeOutput.innerText = `${low} - ${high}`

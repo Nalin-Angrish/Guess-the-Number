@@ -10,33 +10,26 @@
     <main>
         <div id="welcomeScreen">
             <h2>Can you Guess the Number?<br>Between 1 to 1000</h2>
-            <br>
-            <p> Instructions 
-                <ol>Guess the number by adding the closest number 
-                    to the one created by computer 
-                    (in this case Browser)
+            <p style="font-size:3rem"> Instructions:
+                <ol style="font-size:2.3rem">
+                    Computer will choose a number randomly and you have 10 attempts to guess it.
                 </ol>
-                <ol>
-                    Pay attention to the cursor under Current Range
-                    which indicates how close you are to guess the number  
+                <ol style="font-size:2.3rem">
+                    Type your guess and press Enter to check whether your guess is correct or not.
                 </ol>
-                <ol>
-                    If you lose, click new Game to start again 
-                </ol>
-                
             </p>
             <section>
                 <p><br></p>
                 <div class="button-wrapper">
-                    <button onclick="proMode()">Start Game</button>
+                    <button style="font-size:3rem" onclick="proMode()">Start Game</button>
                 </div>
             </section>
         </div>
         <div id="gameArea">
-            <button id="newGameButton" onclick="newGame()">New Game</button>
+            <button style="font-size:3rem" id="newGameButton" onclick="newGame()">New Game</button>
             <section>
-                <h3 id="textOutput">Your Guess</h3>
-                <input type="number" 
+                <h3 id="textOutput" style="font-size:4rem; margin-bottom: 1rem;">Your Guess</h3>
+                <input style="font-size:3rem" type="number" 
                 id="inputBox" 
                 min="1" 
                 max="1000" 
@@ -44,8 +37,8 @@
                 />
             </section>
             <section>
-                <p>Current Range:</p>
-                <span id="rangeOutput">1 - 1000</span>
+                <p style="font-size:3rem">Current Range:</p>
+                <span id="rangeOutput" style="font-size:2.5rem">1 - 1000</span>
                 <div id="range" style="border-radius: 10px; overflow: hidden">
                     <span id="low" style="border-radius: 0px"></span>
                     <span id="space" style="border-radius: 0px"></span>
