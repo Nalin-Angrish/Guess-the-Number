@@ -10,8 +10,8 @@ function rangeUpdate() {
   var l1 = low, h1 = high;
   if (h1 - l1 < 400) {
     l1 = (h1 + l1) / 2 - 200;
-    l1 = max(0, l1);
-    l1 = min(600, l1);
+    l1 = l1 < 0 ? 0 : l1;
+    l1 = l1 > 600 ? 600 : l1;
     h1 = l1 + 400;
   }
   const rangeOutput = document.getElementById("rangeOutput");
