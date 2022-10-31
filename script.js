@@ -11,6 +11,7 @@ function rangeUpdate() {
   if (h1 - l1 < 400) {
     l1 = (h1 + l1) / 2 - 200;
     l1 = max(0, l1);
+    l1 = min(600, l1);
     h1 = l1 + 400;
   }
   const rangeOutput = document.getElementById("rangeOutput");
