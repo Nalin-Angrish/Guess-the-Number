@@ -8,9 +8,9 @@ let high = 1000;
 
 function rangeUpdate() {
   var l1 = low, h1 = high;
-  if (h1 - l1 < 200) {
-    l1 = (h1 + l1) / 2 - 100;
-    h1 = l1 + 200;
+  if (h1 - l1 < 400) {
+    l1 = (h1 + l1) / 2 - 200;
+    h1 = l1 + 400;
   }
   const rangeOutput = document.getElementById("rangeOutput");
   rangeOutput.innerText = `${low} - ${high}`
@@ -93,7 +93,7 @@ function compareGuess() {
       document.getElementById("inputBox").value = "";
     }else {
       document.getElementById("textOutput").innerHTML = 
-      "YAY!👏  You Won! 🏆 Correct guess after  " + attempts + " attempts";
+      "You Won! 🏆 Correct guess after  " + attempts + " attempts";
       endGame();
     } else {
         if(userGuess > computerGuess){
@@ -104,9 +104,9 @@ function compareGuess() {
               document.getElementById("textOutput").innerHTML = 
               "You Lose! 😳 but you can try again, <br> The number was " + computerGuess;
              endGame();
-            }else {
+            } else {
               document.getElementById("textOutput").innerHTML = 
-              "YAY!👏  Correct after  " + attempts + " attempts";
+              "You Won!👏  Correct after  " + attempts + " attempts";
              endGame();
            }
     }
