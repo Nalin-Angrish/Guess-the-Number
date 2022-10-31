@@ -86,12 +86,12 @@ function compareGuess() {
   if(userGuess > computerGuess){
    if (userGuess < high) high = userGuess;
     document.getElementById("textOutput").innerHTML 
-    = "Guess to high, try a lower one 🙂 "
+    = "Guess too high, try a lower one 🙂 "
     document.getElementById("inputBox").value = "";
     } else if (userGuess < computerGuess) {
       if (userGuess > low) low = userGuess;
       document.getElementById("textOutput").innerHTML = 
-      "Guess to low, try a higher one 🙂 "
+      "Guess too low, try a higher one 🙂 "
       document.getElementById("inputBox").value = "";
     }else {
       document.getElementById("textOutput").innerHTML = 
