@@ -154,3 +154,17 @@ input {
     }
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0;
+}

@@ -9,7 +9,7 @@
 <body onload="init()">
     <main>
         <div id="welcomeScreen">
-            <h2>Can you Guess the Number?<br>Between 1 to 1000</h2>
+            <h2>Can you Guess the Number?<br>Between 1 to 1,000,000</h2>
             <p style="font-size:3rem"> Instructions:
                 <ol style="font-size:2.3rem">
                     Computer will choose a number randomly and you have 10 attempts to guess it.
@@ -19,9 +19,12 @@
                 </ol>
             </p>
             <section>
-                <p><br></p>
+              <form onsubmit="e.preventDefault();" id="loginForm">
+                <input type="text" name="name" placeholder="Enter your name"/>
+                <input type="text" name="entry" placeholder="Enter your entry number"/>
+              </form>
                 <div class="button-wrapper">
-                    <button style="font-size:3rem" onclick="proMode()">Start Game</button>
+                    <button style="font-size:3rem" onclick="loginAndStart()">Start Game</button>
                 </div>
             </section>
         </div>
@@ -38,7 +41,7 @@
             </section>
             <section>
                 <p style="font-size:3rem">Current Range:</p>
-                <span id="rangeOutput" style="font-size:2.5rem">1 - 1000</span>
+                <span id="rangeOutput" style="font-size:2.5rem">1 - 1000000</span>
                 <div id="range" style="border-radius: 10px; overflow: hidden">
                     <span id="low" style="border-radius: 0px"></span>
                     <span id="space" style="border-radius: 0px"></span>
@@ -50,10 +53,10 @@
                     <p>Number of Previous Guesses: </p>
                     <span id="attempts">0</span>
                 </div>
-                <div class="info">
+                <!-- <div class="info">
                     <p>Attempts left: </p>
                     <span id="attemptsleft">10</span>      
-                </div>
+                </div> -->
                 <div class="info">
                     <p>Previous Guesses: </p>
                     <span id="guesses">-</span>      
