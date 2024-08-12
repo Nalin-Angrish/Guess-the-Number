@@ -51,8 +51,17 @@ function endGame() {
   // document.getElementById("newGameButton").style.display = "inline";
   document.getElementById('inputBox').setAttribute("readonly", "readonly");
   gameData.time = (new Date().getTime() - gameData.time)/1000;
-  gameData.guesses = attempts;
+  gameData.attempts = attempts;
   console.log(gameData);
+  fetch('/api/leaderboard', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(gameData)
+  }).then(response => response.json()).then(data => {
+    console.log(data);
+  });
 }
 
 function newGame() {
