@@ -1,4 +1,4 @@
-const High = 1000000;
+const High = 10000;
 const coeff1 = High / 100;
 const coeff2 = High * 0.2;
 const coeff4 = High * 0.4;
